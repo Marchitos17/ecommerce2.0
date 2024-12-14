@@ -1,0 +1,352 @@
+:root {
+    --primary-color: #fbbc05;
+    --secondary-color: #1a73e8;
+    --text-color: #f9f9f9;
+    --background-color: #121212;
+    --card-bg: #1e1e1e;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;  /* Modifica se necessario per il tuo layout */
+    display: flex;
+    margin: 0 auto;
+    padding: 0 20px;  /* Puoi aumentare o diminuire il padding se il layout non si adatta */
+    flex-wrap: wrap;  /* Se vuoi che gli elementi si adattino su più righe */
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  
+  .navbar {
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  .navbar .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f9c113;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  .navbar .logo span {
+    color: #f1f1f1;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #f0f0f0;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f9c113;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #f9c113;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--highlight-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 40px;
+    transition: color 0.3s ease;
+  }
+  
+  .logo:hover {
+    color: var(--hover-color);
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: var(--highlight-color);
+    border-bottom: 2px solid var(--highlight-color);
+  }
+  
+  .cart-icon {
+    margin-left: auto; /* Spinge il carrello all'estrema destra */
+  }
+  
+  .cart-icon img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .cart-icon img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Effetti di scroll fluido */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  .cart-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-container .cart {
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+  }
+  
+  .cart-container .cart img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .cart-container .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #f9c113;
+    color: #111;
+    font-size: 12px;
+    font-weight: 600;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Hero Section */
+  .hero {
+    background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-an-old-gym-setting-with-dumbbells-picture-image_2667256.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 91vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-color);
+  }
+  
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero h1{
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    background-color: #302f2f;
+  }
+  
+  .hero h1 span {
+    color: var(--secondary-color);
+  }
+  
+  .hero p {
+    margin-top: 20px;
+    font-size: 1.25rem;
+    color: #ccc;
+  }
+  
+  .hero .btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background: var(--secondary-color);
+  }
+  
+  /* Catalogo */
+  .catalog {
+    padding: 50px 0;
+    height: 91vh;
+  }
+  .catalog .container {
+    width: 100%;
+    max-width: 1200px; /* Puoi aumentare o ridurre questo valore */
+    margin: 0 auto; /* Centrato */
+    padding: 0 20px; /* Spazio sui lati */
+  }
+  
+  .cta-button {
+    background-color: #f9c113;
+    color: #111;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #f1b40b;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: var(--card-bg);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    max-width: 300px; /* Limitiamo la larghezza della card */
+    width: 100%; /* La card può adattarsi al 100% della larghezza disponibile */
+  }
+  
+  
+  .product-card img {
+      max-width: 100%;
+      height: 100%;
+      max-height: 250px; /* Puoi limitare l'altezza se necessario */
+      margin-bottom: 15px;
+      border-radius: 5px;
+      object-fit: cover;
+  }
+  
+  .product-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-card .price {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .btn-secondary {
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background: var(--primary-color);
+  }
+  
+  
+  /* Footer */
+  .footer {
+    background: #1e1e1e;
+    color: #888;
+    padding: 20px;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Aggiustamento per schermi piccoli */
+    }
+  
+    .product-card h3 {
+      font-size: 1rem; /* Adatta la dimensione del testo */
+    }
+  
+    .product-card .price {
+      font-size: 1rem; /* Adatta la dimensione del testo */
+    }
+  }
+  
